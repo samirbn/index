@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilaSoft POS - النظام التكاملي المتطور لإدارة المبيعات والمحلات التجارية</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1354025969577127');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1354025969577127&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Cairo) -->
@@ -437,6 +453,11 @@
                 return;
             }
 
+            // تتبع إحالة ناجحة عبر Meta Pixel (Facebook Lead Event)
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', { content_name: 'Trial Code Request', user_name: name });
+            }
+
             // توليد كود التفعيل التجريبي الفوري المعتمد في السيرفر والجافا (SILA-7DAY-XXXX)
             const phoneDigits = phone.replace(/\D/g, '');
             const last4 = phoneDigits.length >= 4 ? phoneDigits.slice(-4) : Math.floor(1000 + Math.random() * 9000);
@@ -466,6 +487,7 @@
                         <div>1️⃣ افتح برنامج SilaSoft POS على جهازك.</div>
                         <div>2️⃣ أدخل الكود أعلاه <span class="text-brand-400 font-mono font-bold">${trialCode}</span> في شاشة التفعيل أو في (الإعدادات ⬅️ ترخيص البرنامج).</div>
                         <div>3️⃣ سيتم تفعيل جميع خصائص البرنامج مجاناً لمدة 7 أيام!</div>
+                        <div class="pt-2 mt-2 border-t border-slate-800 text-slate-300 font-semibold">🔑 بيانات الدخول الافتراضية للبرنامج:<br><span class="text-brand-400 font-mono text-sm">اسم المستخدم: admin | كلمة المرور: 1234</span></div>
                     </div>
 
                     <div class="flex gap-3">
