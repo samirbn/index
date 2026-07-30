@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilaSoft POS - نظام إدارة المبيعات والمحلات التكاملي</title>
+    <title>SilaSoft POS - النظام التكاملي المتطور لإدارة المبيعات والمحلات التجارية</title>
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Cairo) -->
@@ -53,15 +53,14 @@
     <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
         <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-emerald-300 flex items-center justify-center font-extrabold text-dark-950 text-xl shadow-lg shadow-brand-500/20">
-                    ⚡
-                </div>
-                <h1 class="text-2xl font-black tracking-tight text-white">SilaSoft <span class="text-brand-400">POS</span></h1>
+                <img src="logo.png" alt="SilaSoft POS Logo" class="h-10 md:h-12 w-auto object-contain rounded-xl" onerror="this.onerror=null; this.src='icon.png';" />
+                <h1 class="text-2xl font-black tracking-tight text-white hidden sm:block">SilaSoft <span class="text-brand-400">POS</span></h1>
             </div>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-                <a href="#features" class="hover:text-brand-400 transition">المميزات</a>
-                <a href="#advantages" class="hover:text-brand-400 transition">الشروط والترخيص</a>
+                <a href="#features" class="hover:text-brand-400 transition">المواصفات التقنية</a>
+                <a href="#advantages" class="hover:text-brand-400 transition">الترخيص والأسعار</a>
+                <a href="#businesses" class="hover:text-brand-400 transition">الأنشطة التجارية</a>
                 <a href="#contact" class="hover:text-brand-400 transition">الدعم الفني</a>
             </nav>
 
@@ -76,16 +75,21 @@
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/15 blur-3xl rounded-full pointer-events-none"></div>
 
         <div class="container mx-auto px-4 md:px-8 text-center max-w-4xl relative z-10">
+            <!-- Main Brand Display -->
+            <div class="flex justify-center mb-6">
+                <img src="logo.png" alt="SilaSoft POS Logo" class="h-20 md:h-24 w-auto object-contain drop-shadow-[0_10px_25px_rgba(16,185,129,0.3)]" onerror="this.onerror=null; this.src='icon.png';" />
+            </div>
+
             <div class="inline-flex items-center gap-2 bg-brand-500/10 text-brand-400 border border-brand-500/20 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                <span>🇩🇿 تطبيق تسيير المحلات والمبيعات الأول في الجزائر</span>
+                <span>🇩🇿 نظام نقاط البيع وتسيير المحلات التجارية</span>
             </div>
 
             <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-white">
-                نظّم تجاراتك، تابع ديونك، وسرّع مبيعاتك <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-emerald-200">بنقرة زر واحدة</span>
+                إدارة شاملة لمبيعاتك، مخزونك، وديونك <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-emerald-200">بأعلى دقة وسرعة</span>
             </h2>
 
             <p class="text-slate-400 text-lg md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
-                نظام التسيير الأسهل لأصحاب المحلات والسوبرماركت — يعمل على الحاسوب والهاتف، يطبع الفواتير والملصقات، ويدعم العمل كلياً بدون إنترنت.
+                حل تكاملي مخصص للمحلات والسوبرماركت — يدعم البيع بالكرتون والقطعة، هيكلة الأسعار الأربعة، طباعة الفواتير والملصقات، الشبكة المحلية، ويعمل كلياً أوفلاين دون إنترنت.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -93,49 +97,49 @@
                     🚀 احصل على نسختك التجريبية مجاناً
                 </a>
                 <a href="tel:0660659223" class="w-full sm:w-auto glass-card hover:bg-slate-800 text-white font-bold text-lg px-8 py-4 rounded-xl border border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center gap-2">
-                    📞 اتصل بالدعم: 0660659223
+                    📞 خدمة الزبائن: 0660659223
                 </a>
             </div>
 
             <!-- Stats Badge -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 glass-card rounded-2xl border border-slate-800">
                 <div>
-                    <div class="text-3xl font-extrabold text-brand-400">100%</div>
-                    <div class="text-xs text-slate-400 mt-1">يعمل بدون إنترنت</div>
+                    <div class="text-3xl font-extrabold text-brand-400">4 فئات</div>
+                    <div class="text-xs text-slate-400 mt-1">أسعار بيع ديناميكية</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-extrabold text-brand-400">6 باركودات</div>
-                    <div class="text-xs text-slate-400 mt-1">لكل صنف واحد</div>
+                    <div class="text-3xl font-extrabold text-brand-400">طباعة حرارية</div>
+                    <div class="text-xs text-slate-400 mt-1">فواتير وملصقات باركود</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-extrabold text-brand-400">7 أيام</div>
-                    <div class="text-xs text-slate-400 mt-1">تجربة مجانية كاملة</div>
+                    <div class="text-3xl font-extrabold text-brand-400">Carton Logic</div>
+                    <div class="text-xs text-slate-400 mt-1">تعبئة بالكرتون والقطعة</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-extrabold text-brand-400">24/7</div>
-                    <div class="text-xs text-slate-400 mt-1">دعم فني متواصل</div>
+                    <div class="text-3xl font-extrabold text-brand-400">Multi-Panier</div>
+                    <div class="text-xs text-slate-400 mt-1">البيع المتعدد لعدة زبائن بوقت واحد</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Features Section -->
+    <!-- Detailed System Features Grid -->
     <section id="features" class="py-20 bg-dark-900 border-t border-slate-800">
         <div class="container mx-auto px-4 md:px-8 max-w-6xl">
             <div class="text-center mb-16">
-                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">مميزات استثنائية لتنمية تجارتك</h3>
-                <p class="text-slate-400 text-base md:text-lg">كل ما تحتاجه لإدارة محلّك بمرونة عالية وأداء فائق السرعة</p>
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">مواصفات وإمكانيات SilaSoft POS</h3>
+                <p class="text-slate-400 text-base md:text-lg">مصمم بأسلوب هندسي متطور يلبي الاحتياجات الواقعية للتجارة الجزائرية</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300">
                     <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
-                        💳
+                        💰
                     </div>
-                    <h4 class="text-xl font-bold mb-3">هيكلة الأسعار والبيع التفاعلي</h4>
+                    <h4 class="text-xl font-bold mb-3">هيكلة الأسعار المتعددة (Multi-Pricing)</h4>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        دعم فئات التسعير المختلفة (*تجزئة، جملة، موزع، عروض خاصة*) مع التحديث الفوري لأسعار السلة بنقرة واحدة.
+                        دعم 4 فئات تسعير منفصلة: **قطاعي (تجزئة)**، **جملة**، **موزع**، و**عروض خاصة**، مع التحديث الآلي الفوري لجميع أصناف السلة بنقرة زر واحدة.
                     </p>
                 </div>
 
@@ -144,28 +148,106 @@
                     <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
                         📦
                     </div>
-                    <h4 class="text-xl font-bold mb-3">البيع بالكرتون والعلبة</h4>
+                    <h4 class="text-xl font-bold mb-3">منطق الكرتون وتعبئة الوحدات (Carton Logic)</h4>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        إمكانية الشراء والإرجاع بالكرتون أو القطعة مع التحويل التلقائي لكميات الكرتون داخل المخزن بدقة.
+                        إمكانية بيع، شراء، وإرجاع المنتجات بالكرتون أو العلبة أو القطعة، مع التحويل الدقيق والآلي للكميات داخل المخزن.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300">
                     <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
+                        🖨️
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">محرك الطباعة والفواتير والمفضلات السريعة</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        طباعة الفواتير الحرارية 80mm ورسمية A4/A5، طباعة ملصقات الباركود المخصصة، وإضافة 5 مجموعات مفضلة للبيع السريع باللمس.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
                         📊
                     </div>
-                    <h4 class="text-xl font-bold mb-3">تحليل الأرباح والديون</h4>
+                    <h4 class="text-xl font-bold mb-3">تحليل الأرباح وحاسبة الزكاة</h4>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        متابعة دقيقة لصافي الأرباح، سجل الكريدي للزبائن، حاسبة الزكاة الشرعية والتنبيهات المسبقة لنفاذ المخزون.
+                        حساب صافي الأرباح الحقيقية بدقة، إدارة الديون والكريدي، تسجيل المصاريف الهالكة واليومية، مع حاسبة زكاة عروض التجارة وفق الأسس الشرعية.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
+                        🌐
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">ربط أجهزة الشبكة والـ Mobile Server</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        تشغيل النظام كخادم رئيسي أو أجهزة فرعية على شبكة محلية (Réseau Local)، مع خادم Mobile REST API المدمج والمحمي بصمت.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">
+                        🛡️
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">الأمان والنسخ الاحتياطي التلقائي</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        معاملات قواعد بيانات بنظام ACID للحماية من فقدان البيانات، نسخ احتياطي واسترجاع بضغطة زر، وتحديد صلاحيات المستخدمين (المدير والبيع).
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Suitable Business Activities Section -->
+    <section id="businesses" class="py-20 bg-dark-950">
+        <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-extrabold mb-3 text-white">الأنشطة التجارية المناسبة للبرنامج</h3>
+                <p class="text-slate-400 text-sm md:text-base">مصمم ليخدم مختلف قطاعات التجارة ومحلات التجزئة والجملة في الجزائر</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">🛒</div>
+                    <div class="font-bold text-white text-sm">السوبرماركت والسوبريت</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">👔</div>
+                    <div class="font-bold text-white text-sm">الملابس والأحذية</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">💄</div>
+                    <div class="font-bold text-white text-sm">مواد التجميل والكماليات</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">🚗</div>
+                    <div class="font-bold text-white text-sm">قطع غيار السيارات والدراجات</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">📦</div>
+                    <div class="font-bold text-white text-sm">تجارة الجملة والتوزيع</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">📱</div>
+                    <div class="font-bold text-white text-sm">الإلكترونيات والهواتف</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">🎁</div>
+                    <div class="font-bold text-white text-sm">البازارات والهدايا</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl mb-2">🛠️</div>
+                    <div class="font-bold text-white text-sm">محلات الخردوات والعقاقير</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- License & Price Structure Section -->
-    <section id="advantages" class="py-20 bg-dark-950">
+    <section id="advantages" class="py-20 bg-dark-900 border-t border-slate-800">
         <div class="container mx-auto px-4 md:px-8 max-w-5xl">
             <div class="glass-card p-8 md:p-12 rounded-3xl border border-brand-500/30 glow-effect">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-slate-800 pb-6">
@@ -181,31 +263,31 @@
 
                 <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
                     <div class="flex items-start gap-3">
-                        <span class="text-brand-400 text-lg">✅</span>
+                        <span class="text-brand-400 text-lg">🔒</span>
                         <div>
-                            <strong class="text-white block text-base mb-1">تفعيل مدى الحياة</strong>
-                            تدفع قيمة البرنامج مرة واحدة فقط بعد انتهاء الفترة التجريبية وتستفيد منه دائمًا بدون رسوم مخفية.
+                            <strong class="text-white block text-base mb-1">تفعيل أوفلاين مدى الحياة</strong>
+                            تدفع قيمة البرنامج مرة واحدة فقط بعد انتهاء الفترة التجريبية وتستفيد منه دائمًا بدون أي اشتراكات شهرية أو سنوية.
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <span class="text-brand-400 text-lg">✅</span>
+                        <span class="text-brand-400 text-lg">🎁</span>
                         <div>
-                            <strong class="text-white block text-base mb-1">فترة تجريبية مجانية</strong>
-                            استمتع بـ 7 أيام تجربة مجانية بكامل الميزات وبدون حظر على أي خصائص.
+                            <strong class="text-white block text-base mb-1">فترة تجريبية مجانية 7 أيام</strong>
+                            استمتع بـ 7 أيام تجربة مجانية بكامل خصائص ومميزات البرنامج ودون أي حظر على الوظائف.
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <span class="text-brand-400 text-lg">✅</span>
+                        <span class="text-brand-400 text-lg">🖥️</span>
                         <div>
-                            <strong class="text-white block text-base mb-1">ربط الأجهزة عبر الشبكة Local</strong>
-                            تشغيل البرنامج على عدة أجهزة في نفس المحل بشبكة محلية (10,000 دج لكل جهاز إضافي).
+                            <strong class="text-white block text-base mb-1">إضافة أجهزة إضافية بالشبكة</strong>
+                            تشغيل البرنامج على عدة أجهزة في نفس المحل بشبكة محلية (Réseau Local)، بتكلفة 10,000 دج لكل جهاز إضافي.
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <span class="text-brand-400 text-lg">✅</span>
+                        <span class="text-brand-400 text-lg">🎧</span>
                         <div>
-                            <strong class="text-white block text-base mb-1">نسخ احتياطي تلقائي 100%</strong>
-                            حماية بياناتك من الضياع في حال حدوث أي خلل في جهاز الكمبيوتر.
+                            <strong class="text-white block text-base mb-1">دعم فني متواصل 24/7</strong>
+                            فريق دعم فني متوفر طيلة أيام الأسبوع لمساعدتك والإجابة على استفساراتك.
                         </div>
                     </div>
                 </div>
@@ -214,24 +296,24 @@
     </section>
 
     <!-- Lead Form Section -->
-    <section id="register" class="py-20 bg-dark-900 border-t border-slate-800">
+    <section id="register" class="py-20 bg-dark-950">
         <div class="container mx-auto px-4 max-w-lg">
             <div class="glass-card p-8 md:p-10 rounded-3xl border border-slate-700 shadow-2xl">
-                <h3 class="text-2xl md:text-3xl font-black text-center mb-2 text-white">سجّل للحصول على النسخة التجريبية</h3>
-                <p class="text-slate-400 text-center mb-8 text-sm">أدخل معلوماتك وسنتصل بك لتفعيل حسابك فوراً خلال دقائق</p>
+                <h3 class="text-2xl md:text-3xl font-black text-center mb-2 text-white">طلب النسخة والتفعيل المجاني</h3>
+                <p class="text-slate-400 text-center mb-8 text-sm">أدخل معلوماتك وسنتصل بك لتفعيل حسابك التجريبي فوراً خلال دقائق</p>
 
                 <form id="leadForm" class="space-y-5">
                     <div>
-                        <label class="block text-sm font-bold mb-2 text-slate-200">الاسم الكامل / اسم المحل التجارية</label>
-                        <input type="text" id="name" required placeholder="مثال: سوبرماركت البركة" class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-sm transition">
+                        <label class="block text-sm font-bold mb-2 text-slate-200">الاسم الكامل / اسم المحل التجاري</label>
+                        <input type="text" id="name" required placeholder="مثال: سوبرماركت البركة" class="w-full px-4 py-3.5 rounded-xl bg-dark-900 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-sm transition">
                     </div>
                     <div>
                         <label class="block text-sm font-bold mb-2 text-slate-200">رقم الهاتف</label>
-                        <input type="tel" id="phone" required placeholder="06XX XX XX XX" class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-left text-sm transition" dir="ltr">
+                        <input type="tel" id="phone" required placeholder="06XX XX XX XX" class="w-full px-4 py-3.5 rounded-xl bg-dark-900 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-left text-sm transition" dir="ltr">
                     </div>
                     <div>
                         <label class="block text-sm font-bold mb-2 text-slate-200">الولاية</label>
-                        <input type="text" id="state" required placeholder="مثال: الجزائر / وهران / قسنطينة" class="w-full px-4 py-3.5 rounded-xl bg-dark-950 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-sm transition">
+                        <input type="text" id="state" required placeholder="مثال: الجزائر / وهران / قسنطينة" class="w-full px-4 py-3.5 rounded-xl bg-dark-900 border border-slate-700 focus:border-brand-500 focus:outline-none text-white text-sm transition">
                     </div>
                     <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-dark-950 font-extrabold py-4 rounded-xl shadow-lg shadow-brand-500/25 hover:scale-[1.02] transition duration-300 text-base">
                         ⚡ إرسال الطلب والتفعيل فوراً
@@ -239,7 +321,7 @@
                 </form>
 
                 <div id="successMsg" class="hidden mt-6 p-4 bg-brand-500/20 border border-brand-500/40 rounded-xl text-center text-brand-300 text-sm font-bold">
-                    ✅ تم استقبال طلبك بنجاح! يتواصل معك فريق الدعم الفني فوراً للتفعيل.
+                    ✅ تم استقبال طلبك بنجاح! يتواصل معك فريق خدمة الزبائن فوراً للتفعيل.
                 </div>
             </div>
         </div>
@@ -247,9 +329,10 @@
 
     <!-- Footer -->
     <footer id="contact" class="py-10 bg-dark-950 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p class="mb-2">جميع الحقوق محفوظة © 2026 SilaSoft POS</p>
-            <p class="text-xs">للتواصل المباشر مع خدمة الزبائن: <a href="tel:0660659223" class="text-brand-400 font-bold hover:underline">0660659223</a></p>
+        <div class="container mx-auto px-4 flex flex-col items-center justify-center gap-3">
+            <img src="logo.png" alt="SilaSoft POS Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='icon.png';" />
+            <p class="font-bold text-slate-400">جميع الحقوق محفوظة © 2026 SilaSoft POS</p>
+            <p class="text-xs">للتواصل المباشر مع خدمة الزبائن والتفعيل: <a href="tel:0660659223" class="text-brand-400 font-bold hover:underline">0660659223</a></p>
         </div>
     </footer>
 
