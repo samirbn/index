@@ -378,41 +378,38 @@
     </footer>
 
     <script>
-        // 🔗 ضع رابط Google Apps Script المباشر هنا بعد النشر
-        const GOOGLE_SHEETS_URL = '';
+        // 💬 إرسال الطلبات مباشرة إلى واتساب الدعم الفني: 0660659223
+        const WHATSAPP_PHONE = '213660659223';
 
-        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const successMsg = document.getElementById('successMsg');
             
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                state: document.getElementById('state').value
-            };
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const state = document.getElementById('state').value.trim();
 
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '⏳ جاري إرسال الطلب والتسجيل...';
-
-            try {
-                if (GOOGLE_SHEETS_URL && GOOGLE_SHEETS_URL.trim() !== '') {
-                    await fetch(GOOGLE_SHEETS_URL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(formData)
-                    });
-                }
-                successMsg.classList.remove('hidden');
-                this.reset();
-            } catch (err) {
-                console.error(err);
-                alert('تم استلام معلوماتك وسيتم التواصل معك فوراً.');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '⚡ إرسال الطلب والتفعيل فوراً';
+            if (!name || !phone || !state) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
             }
+
+            // تنسيق الرسالة المباشرة إلى واتساب
+            const message = `السلام عليكم، أريد طلب وتفعيل برنامج SilaSoft POS ⚡\n\n` +
+                            `👤 الاسم / اسم المحل: ${name}\n` +
+                            `📞 رقم الهاتف: ${phone}\n` +
+                            `📍 الولاية: ${state}\n\n` +
+                            `شكراً جزيلاً!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
+
+            // إظهار رسالة التقديم والتحويل المباشر دون حظر النوافذ المنبثقة
+            successMsg.classList.remove('hidden');
+            
+            // تحويل الزبون فوراً ومباشرة لتطبيق الواتساب (لتفادي حجب النوافذ المنبثقة)
+            window.location.href = whatsappUrl;
         });
     </script>
 </body>
