@@ -378,10 +378,11 @@
     </footer>
 
     <script>
-        // 💬 إرسال الطلبات مباشرة إلى واتساب الدعم الفني: 0660659223
-        const WHATSAPP_PHONE = '213660659223';
+        // 🤖 إرسال الإشعارات التلقائية الفورية إلى بوت تيليجرام (Silasoft Bot)
+        const TELEGRAM_BOT_TOKEN = '8891983117:AAEjTEZof4ZhDqchPw8Sdsx-hCRxtdkECOM';
+        const TELEGRAM_CHAT_ID = '735741342';
 
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const successMsg = document.getElementById('successMsg');
@@ -395,21 +396,36 @@
                 return;
             }
 
-            // تنسيق الرسالة المباشرة إلى واتساب
-            const message = `السلام عليكم، أريد طلب وتفعيل برنامج SilaSoft POS ⚡\n\n` +
-                            `👤 الاسم / اسم المحل: ${name}\n` +
-                            `📞 رقم الهاتف: ${phone}\n` +
-                            `📍 الولاية: ${state}\n\n` +
-                            `شكراً جزيلاً!`;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '⏳ جاري إرسال الطلب...';
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
+            const message = `⚡ *طلب جديد لتفعيل SilaSoft POS* ⚡\n\n` +
+                            `👤 *الاسم / المحل:* ${name}\n` +
+                            `📞 *رقم الهاتف:* \`${phone}\`\n` +
+                            `📍 *الولاية:* ${state}\n\n` +
+                            `⏰ *التوقيت:* ${new Date().toLocaleString('ar-DZ')}`;
 
-            // إظهار رسالة التقديم والتحويل المباشر دون حظر النوافذ المنبثقة
-            successMsg.classList.remove('hidden');
-            
-            // تحويل الزبون فوراً ومباشرة لتطبيق الواتساب (لتفادي حجب النوافذ المنبثقة)
-            window.location.href = whatsappUrl;
+            try {
+                // إرسال الإشعار المباشر عبر API تيليجرام
+                await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                });
+
+                successMsg.classList.remove('hidden');
+                this.reset();
+            } catch (err) {
+                console.error('Telegram notification error:', err);
+                alert('تم استلام معلوماتك وسيتم التواصل معك فوراً.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '⚡ إرسال الطلب والتفعيل فوراً';
+            }
         });
     </script>
 </body>
