@@ -9,9 +9,9 @@ function doPost(e) {
     
     // إنشاء الهيدر والعناوين تلقائياً في السطر الأول إذا كان الجدول فارغاً
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["التاريخ والوقت", "اسم المحل/الزبون", "رقم الهاتف", "الولاية", "حالة الطلب"]);
+      sheet.appendRow(["التاريخ والوقت", "اسم المحل/الزبون", "رقم الهاتف", "الولاية", "الرقم التسلسلي للجهاز (HWID)", "حالة الطلب"]);
       // تنسيق السطر الأول باللون الأخضر والخط العريض
-      var headerRange = sheet.getRange(1, 1, 1, 5);
+      var headerRange = sheet.getRange(1, 1, 1, 6);
       headerRange.setFontWeight("bold");
       headerRange.setBackground("#10b981");
       headerRange.setFontColor("#ffffff");
@@ -30,6 +30,7 @@ function doPost(e) {
       data.name || "غير محدد",
       "'" + (data.phone || ""), // الحفاظ على الصفر في بداية رقم الهاتف
       data.state || "غير محدد",
+      data.hwid || "غير محدد",
       "جديد ⚡"
     ]);
     
